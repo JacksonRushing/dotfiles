@@ -1,0 +1,12 @@
+{
+    "autosave": 0,
+    "tabsize": 4,
+    "tabstospaces": true,
+    "softwrap": true,
+    "ruler": true,
+    "savecursor": true,
+    "saveundo": true,
+    "scrollbar": true,
+    "mouse": true,
+    "colorscheme": "monokai"
+}
