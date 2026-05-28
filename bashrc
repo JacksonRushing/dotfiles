@@ -48,7 +48,7 @@ alias jl='jupyter lab --no-browser --port=8888'
 # --- Quick edit + reload ---
 alias bashrc='micro ~/.bashrc && source ~/.bashrc'
 alias tmuxconf='micro ~/.tmux.conf && tmux source-file ~/.tmux.conf'
-alias dotfiles-update='curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/dotfiles/main/bootstrap.sh | bash && source ~/.bashrc'
+alias dotfiles-update='curl -fsSL https://raw.githubusercontent.com/jacksonrushing/dotfiles/main/bootstrap.sh | bash && source ~/.bashrc'
 
 
 # --- fzf if installed ---
