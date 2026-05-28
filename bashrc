@@ -17,7 +17,7 @@ alias ...='cd ../..'
 alias grep='grep --color=auto'
 
 # --- Workflow-specific ---
-alias gpu='watch -n 1 nvidia-smi'
+alias gpu='nvitop'
 alias gpus='nvidia-smi'
 alias dfh='df -h'
 alias duh='du -h --max-depth=1 | sort -h'
@@ -48,6 +48,8 @@ alias jl='jupyter lab --no-browser --port=8888'
 # --- Quick edit + reload ---
 alias bashrc='micro ~/.bashrc && source ~/.bashrc'
 alias tmuxconf='micro ~/.tmux.conf && tmux source-file ~/.tmux.conf'
+alias dotfiles-update='curl -fsSL https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/dotfiles/main/bootstrap.sh | bash && source ~/.bashrc'
+
 
 # --- fzf if installed ---
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

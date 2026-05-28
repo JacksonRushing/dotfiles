@@ -29,10 +29,17 @@ backup_and_link "$DOTFILES_DIR/inputrc"    "$HOME/.inputrc"
 mkdir -p "$HOME/.config/micro"
 backup_and_link "$DOTFILES_DIR/micro-settings.json" "$HOME/.config/micro/settings.json"
 
-# Install nice-to-haves if missing (Ubuntu/Debian)
+# Install nice-to-haves (don't fail the whole script if one is unavailable)
 if command -v apt-get >/dev/null 2>&1; then
     sudo apt-get update -qq
-    sudo apt-get install -y tmux git htop tree jq fzf ripgrep micro
+    for pkg in tmux git htop btop tree jq fzf ripgrep micro python3-pip; do
+        sudo apt-get install -y "$pkg" || echo "⚠ couldn't install $pkg, skipping"
+    done
+fi
+
+# nvitop for GPU monitoring (no-op on CPU boxes if pip missing or no GPU)
+if command -v pip3 >/dev/null 2>&1; then
+    pip3 install --user nvitop 2>/dev/null || echo "⚠ couldn't install nvitop, skipping"
 fi
 
 echo "✓ Dotfiles installed. Run: source ~/.bashrc"
