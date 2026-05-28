@@ -9,6 +9,9 @@ PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
 export EDITOR=micro
 export VISUAL=micro
 
+# --- PATH additions ---
+export PATH="$HOME/.local/bin:$PATH"
+
 # --- Better defaults ---
 alias ll='ls -lah'
 alias la='ls -A'
