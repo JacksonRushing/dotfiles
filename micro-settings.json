@@ -8,5 +8,6 @@
     "saveundo": true,
     "scrollbar": true,
     "mouse": true,
-    "colorscheme": "monokai"
+    "colorscheme": "monokai",
+    "clipboard": "terminal"
 }
