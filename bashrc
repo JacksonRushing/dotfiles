@@ -56,3 +56,5 @@ alias dotfiles-update='curl -fsSL https://raw.githubusercontent.com/jacksonrushi
 
 # --- fzf if installed ---
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+alias fixmouse='printf "\e[?1000l\e[?1002l\e[?1003l\e[?1006l"; reset'
